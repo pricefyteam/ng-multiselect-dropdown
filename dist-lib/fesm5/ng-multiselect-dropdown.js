@@ -254,7 +254,7 @@ var MultiSelectComponent = /** @class */ (function () {
         if ((!this.data || this.data.length === 0) && this._settings.allowRemoteDataSearch) {
             return false;
         }
-        return filteredItems.length === this.selectedItems.length + itemDisabledCount;
+        return filteredItems.length === this.selectedItems.length;
     };
     MultiSelectComponent.prototype.showButton = function () {
         if (!this._settings.singleSelection) {
