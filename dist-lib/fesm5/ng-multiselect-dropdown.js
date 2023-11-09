@@ -348,12 +348,11 @@ var MultiSelectComponent = /** @class */ (function () {
             return false;
         }
         if (!this.isAllItemsSelected()) {
-            // filter out disabled item first before slicing
-            this.selectedItems = this.listFilterPipe.transform(this._data, this.filter).filter(function (item) { return !item.isDisabled; }).slice();
+            this.selectedItems = this._data.slice();
             this.onSelectAll.emit(this.emittedValue(this.selectedItems));
         }
         else {
-            this.selectedItems = [];
+            this.selectedItems = this.listFilterPipe.transform(this._data, this.filter).filter(function (item) { return item.isDisabled; }).slice();
             this.onDeSelectAll.emit(this.emittedValue(this.selectedItems));
         }
         this.onChangeCallback(this.emittedValue(this.selectedItems));
