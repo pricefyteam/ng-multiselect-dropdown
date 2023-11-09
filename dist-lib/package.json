@@ -64,9 +64,6 @@
     "typescript": "3.5.3",
     "zone.js": "^0.10.2"
   },
-  "dependencies": {
-    "tslib": "^1.9.0"
-  },
   "main": "bundles/ng-multiselect-dropdown.umd.js",
   "module": "fesm5/ng-multiselect-dropdown.js",
   "es2015": "fesm2015/ng-multiselect-dropdown.js",
@@ -76,5 +73,8 @@
   "fesm2015": "fesm2015/ng-multiselect-dropdown.js",
   "typings": "ng-multiselect-dropdown.d.ts",
   "metadata": "ng-multiselect-dropdown.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
 }
